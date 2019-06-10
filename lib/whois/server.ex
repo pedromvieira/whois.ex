@@ -17,7 +17,7 @@ defmodule Whois.Server do
 
   @spec for(String.t()) :: {:ok, t} | :error
   def for(domain) do
-    [_, tld] =
+    tld =
       domain
       |> String.split(".")
       |> List.last()
